@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Intro Component With Sign-up Form</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Text -->
+      <div class="container-text">
+        <h1 class="heading">Learn to code by <br />watching others</h1>
+        <p class="heading-desc">
+          See how experienced developers solve problems in real-time.<br
+            class="break"
+          />
+          Watching scripted tutorials is great, but understanding how developers
+          think is invaluable.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <div class="container-second">
+        <div class="trial">
+          <p class="trial-text">
+            <b>Try it free 7 days</b> then $20/mo. thereafter
+          </p>
+        </div>
+
+        <div class="form-container">
+          <form id="signup-form">
+            <div class="input-container" id="firstNameContainer">
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="First Name"
+              />
+              <img
+                src="./assets/icon-error.svg"
+                alt=""
+                class="error-icon"
+                id="firstNameError"
+              />
+              <div class="error-message" id="firstNameErrorMessage"></div>
+            </div>
+
+            <div class="input-container" id="lastNameContainer">
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Last Name"
+                required
+              />
+              <img
+                src="./assets/icon-error.svg"
+                alt="Error"
+                class="error-icon"
+                id="lastNameError"
+              />
+              <div class="error-message" id="lastNameErrorMessage"></div>
+            </div>
+
+            <div class="input-container" id="emailContainer">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <img
+                src="./assets/icon-error.svg"
+                alt="Error"
+                class="error-icon"
+                id="emailError"
+              />
+              <div class="error-message" id="emailErrorMessage"></div>
+            </div>
+
+            <div class="input-container" id="passwordContainer">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <img
+                src="./assets/icon-error.svg"
+                alt="Error"
+                class="error-icon"
+                id="passwordError"
+              />
+              <div class="error-message" id="passwordErrorMessage"></div>
+            </div>
+
+            <button type="button" onclick="validateForm()">
+              Claim your free trial
+            </button>
+            <p class="terms">
+              By clicking the button, you are agreeing to our
+              <span>Terms and Services</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js" async defer></script>
+  </body>
+</html>
