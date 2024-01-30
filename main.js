@@ -29,6 +29,7 @@ function validateForm() {
   }
 }
 
+// Error Displays
 function displayError(fieldId, message) {
   // Display error message
   document.getElementById(`${fieldId}ErrorMessage`).innerHTML = message;
@@ -37,6 +38,30 @@ function displayError(fieldId, message) {
   // Add error class to input container
   document.getElementById(`${fieldId}Container`).classList.add("error");
 }
+
+// Function to handle input focus
+function handleInputFocus(fieldId) {
+  // Remove error class from input container when focused
+  document.getElementById(`${fieldId}Container`).classList.remove("error");
+  // Hide error icon
+  document.getElementById(`${fieldId}Error`).style.display = "none";
+  // Clear error message
+  document.getElementById(`${fieldId}ErrorMessage`).innerHTML = "";
+}
+
+// Attach focus event listeners to inputs
+document.getElementById("firstName").addEventListener("focus", function () {
+  handleInputFocus("firstName");
+});
+document.getElementById("lastName").addEventListener("focus", function () {
+  handleInputFocus("lastName");
+});
+document.getElementById("email").addEventListener("focus", function () {
+  handleInputFocus("email");
+});
+document.getElementById("password").addEventListener("focus", function () {
+  handleInputFocus("password");
+});
 
 function resetErrorMessages() {
   // Reset error messages and hide error icons
